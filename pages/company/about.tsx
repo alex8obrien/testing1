@@ -1,10 +1,12 @@
 import Head from 'next/head'
 import styles from '../../styles/Home.module.css'
 import Footer from '../../components/footer/footer'
+import Header from '../../components/header/header'
 
 export default function About() {
   return (
     <>
+      <Header />
       <Head>
         <title>About Us</title>
         <meta name="description" content="About Us Page" />
