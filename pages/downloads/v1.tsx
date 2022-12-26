@@ -1,26 +1,22 @@
 import Head from 'next/head'
 import styles from '../../styles/Home.module.css'
-import Footer from '../../components/Footer'
-import Header from '../../components/Header'
 
-export default function About() {
+export default function V1() {
   return (
     <>
-
       <Head>
-        <title>About Us</title>
-        <meta name="description" content="About Us Page" />
+        <title>V1 Download</title>
+        <meta name="description" content="The download of version 1" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
         <div className={styles.description}>
-          <p>
-            About Us
-          </p>
+          <h1>
+            This is the download page for version 1 of the app.
+          </h1>
         </div>
       </main>
-      
     </>
   )
 }
