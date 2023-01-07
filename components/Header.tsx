@@ -23,10 +23,12 @@ export default function Header() {
           {navLinks.map((link, index) => {
             return (
               // eslint-disable-next-line react/jsx-key
-              <Link href={link.path}>
-                <div key={index}>{link.name}</div>
+              <Link href={link.path} key={index} className={`nav__link`}>
+                <padding className={styles.nav__link}>{link.name}</padding>
+                <!--{link.name}-->
+
               </Link>
-              );
+            );
           })}
         </div>
       </nav>
