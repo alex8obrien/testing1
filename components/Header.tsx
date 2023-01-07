@@ -2,11 +2,16 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import {navLinks} from "./NavLink";
 import Link from "next/link";
+import React, {useState} from "react";
 
 export default function Header() {
+
+  const [navActive, setNavActive] = useState(false);
+  const [activeIdx, setActiveIdx] = useState(-1);
+
   return (
     <header>
-      <nav className={styles.nav}>
+      <nav className={`nav`}>
         <Link href="/">
           <>
             <Image
@@ -19,15 +24,37 @@ export default function Header() {
           </>
         </Link>
 
-        <div className={styles.nav}>
+
+
+
+
+
+
+
+
+        <div
+          onClick={() => setNavActive(!navActive)}
+          className={`nav__menu-bar`}
+        >
+          <div></div>
+          <div></div>
+          <div></div>
+          </div>
+
+        <div className={`${ navActive ? "active" : ""} nav__menu-list`}>
           {navLinks.map((link, index) => {
             return (
-              // eslint-disable-next-line react/jsx-key
-              <Link href={link.path} key={index} className={`nav__link`}>
-                <padding className={styles.nav__link}>{link.name}</padding>
-                <!--{link.name}-->
-
-              </Link>
+              <div
+                onClick={() => {
+                  setActiveIdx(index);
+                  setNavActive(false);
+                }}
+                key={link.name}
+              >
+                <Link href={link.path} key={index} className={`nav__link`}>
+                {link.name}
+                </Link>
+              </div>
             );
           })}
         </div>
