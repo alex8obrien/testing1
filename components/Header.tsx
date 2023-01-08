@@ -7,7 +7,7 @@ import React, {useState} from "react";
 export default function Header() {
 
   const [navActive, setNavActive] = useState(false);
-  const [activeIdx, setActiveIdx] = useState(-1);
+  const [, setActiveIdx] = useState(-1);
 
   return (
     <header>
@@ -23,14 +23,6 @@ export default function Header() {
             />
           </>
         </Link>
-
-
-
-
-
-
-
-
 
         <div
           onClick={() => setNavActive(!navActive)}
