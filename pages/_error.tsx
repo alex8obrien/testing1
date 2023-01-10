@@ -14,15 +14,11 @@ const Error: NextPage<Props> = ({ statusCode }) => {
         <meta name="description" content="This is the error page" />
         <meta name="viewport" content="width=device-width, initial-scale=device-height" />
       </Head>
-      <main className={styles.main}>
-        <p>
-          <h1>Error {statusCode}</h1>
 
-            {statusCode
-              ? `An error ${statusCode} occurred on server`
-              : "An error occurred on client"}
-        </p>
-      </main>
+      <div className={styles.main}>
+        <h1>Error {statusCode}</h1>
+      </div>
+
     </>
   );
 }
