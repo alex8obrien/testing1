@@ -15,16 +15,20 @@ spacing{
   justify-content: space-between;
 }
 header{
-  position: sticky;
-  z-index: 30;
-  top: 0;
-}
-nav{
   display: flex;
-  padding: 16px;
+  padding: 8px;
   justify-content: space-between;
   align-items: center;
+  top: 0;
   background-color: deepskyblue;
+}
+footer{
+  display: flex;
+  padding: 8px;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 0;
+  background-color: dimgrey;
 }
 .nav__menu-bar{
   display: flex;
@@ -85,7 +89,7 @@ nav{
   .nav__link::before{
     content: '';
     position: absolute;
-    width: 0%;
+    width: 0;
     height: 6px;
     bottom: -16px;
     left: 0;

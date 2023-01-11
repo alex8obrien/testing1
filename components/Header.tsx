@@ -10,8 +10,7 @@ export default function Header() {
   const [, setActiveIdx] = useState(-1);
 
   return (
-    <header>
-      <nav className={`nav`}>
+      <header className={`nav`}>
         <Link href="/">
           <>
             <Image
@@ -50,7 +49,6 @@ export default function Header() {
             );
           })}
         </div>
-      </nav>
-    </header>
+      </header>
   )
 }
