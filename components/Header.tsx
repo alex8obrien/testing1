@@ -32,6 +32,10 @@ export default function Header() {
           <div></div>
           </div>
 
+        <button className={`hamburger`}>
+          
+        </button>
+
         <div className={`${ navActive ? "active" : ""} nav__menu-list`}>
           {navLinks.map((link, index) => {
             return (
